@@ -1,12 +1,13 @@
 export default class IsTyping {
-  lastState = false;
-  liveState = false;
-  lastUpdate = Date.now();
-  listeners = [];
-  time;
-  interval;
-
   constructor({time = 1500} = {}) {
+    Object.assign(this, {
+      lastState: false,
+      liveState: false,
+      lastUpdate: Date.now(),
+      listeners: [],
+      time: null,
+      interval: null,
+    });
     this.time = time;
   }
 
