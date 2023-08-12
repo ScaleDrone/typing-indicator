@@ -2,25 +2,25 @@
 Add typing indicator logic to your JavaScript chat app. Typing-indicator is framework agnostic and works with any JavaScript frameworks (or without).
 
 ## API
-*Creating a new instance of TypingIndicator*
+**Creating a new instance of TypingIndicator**
 ```javascript
 import TypingIndicator from 'typing-indicator';
 const typingIndicator = new TypingIndicator();
 ```
 
-*Creating a new instance of TypingIndicator with custom listening time*
+**Creating a new instance of TypingIndicator with custom listening time**
 Set how fast typingIndicator reacts to typing changes. Default is 1500ms and it's not recommended to set it much lower than 500. Setting it lower will cause the indicator to be too reactive.
 ```javascript
 import TypingIndicator from 'typing-indicator';
 const typingIndicator = new TypingIndicator(1000);
 ```
 
-*Send input changes to typingIndicator*
+**Send input changes to typingIndicator**
 ```javascript
 typingIndicator.onChange(inputText);
 ```
 
-*Listen to when typingIndicator detects typing and stopping typing*
+**Listen to when typingIndicator detects typing and stopping typing**
 ```javascript
 typingIndicator.listen(isTyping => {
   console.log('Is typing?', isTyping);
